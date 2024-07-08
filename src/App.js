@@ -23,11 +23,15 @@ function App() {
     );
   }
 
+  function handleClearList() {
+    setItems([]);
+  }
+
   return (
     <div className="app">
       <Logo />
       <Form onAddItems={handleAddItems} />
-      <PackingList items={items} onDeleteItem={handleDeleteItem} onToggleItem={handleToggleItem} />
+      <PackingList items={items} onDeleteItem={handleDeleteItem} onToggleItem={handleToggleItem} onClearList={handleClearList} />
       <Stats items={items} />
     </div>
   );
